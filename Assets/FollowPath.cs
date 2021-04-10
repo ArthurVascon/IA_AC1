@@ -27,7 +27,7 @@ public class FollowPath : MonoBehaviour
     //DESENHO
     Graph g;
 
-    
+
     void Start()
     {
         //PEGA O WAYPOINTS E O GRAPH DO WPMANAGER
@@ -77,6 +77,13 @@ public class FollowPath : MonoBehaviour
     public void GoToRuin()
     {
         g.AStar(currentNode, wps[7]);
+        currentWP = 0;
+    }
+
+    //Método para navegação até as indústrias no mapa
+    public void GotoIndustry()
+    {
+        g.AStar(currentNode, wps[9]);
         currentWP = 0;
     }
 
